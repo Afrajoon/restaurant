@@ -1,0 +1,121 @@
+@font-face {
+    font-family: "yekan";
+    src: url(../font/0\ Yekan[ES_G_69].TTF);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: "yekan";
+    text-align: center;
+}
+
+.head img{
+    width: 120px;
+}
+
+.head button{
+    all: unset;
+    background-color: rgba(0, 102, 255, 0.76);
+    border-radius: 35px;
+    height: 30px;
+    width: 100p;
+    color: #fff;
+    font-size: 15px;
+    padding: 5px;
+    position: absolute;
+    left: 20px;
+    top: 40px;
+}
+
+.pic-search-box{
+    height: 400px;
+    background-image: url("../picture/10.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: gray;
+    background-blend-mode: multiply;
+    padding: 100px;
+    color: #ffffff;
+}
+
+.pic-search-box h2{
+    font-family: "ferdosi";
+    line-height: 90px;
+    font-size: 30px;
+}
+
+.option{
+    display: flex; 
+    justify-content: space-between;
+    margin: 120px 0;
+    font-size: 20px;
+}
+
+.pic-search-box input{
+    width: 300px;
+    height: 40px;
+    border-radius: 30px 0 0 30px;
+    border: 2px solid rgb(88, 87, 87);
+}
+
+.pic-search-box button{
+    position: relative;
+    all: unset;
+    background-color: rgb(0, 183, 255);
+    margin-left: 0;
+    padding: 6px;
+    border-radius: 0 30px 30px 0;
+    color: rgba(0, 0, 0, 0.781);
+    cursor: pointer;
+    border: 2px solid rgb(88, 87, 87);
+}
+
+.pic-search-box input[placeholder]{
+    text-align: center;
+    font-family: "ferdosi";
+    font-size: 15px;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 35px;
+}
+
+.container h1{
+    margin-top: 45px;
+    font-size: 25px;
+}
+
+.menu-items{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 25px 0;
+}
+
+.items{
+    margin: 10px auto;
+}
+
+.link{
+    text-decoration: none;
+    color: #fff;
+}
+
+.menu-items .items .link img{
+    border-radius: 10px;
+    height: auto;
+}
+
+.roler{
+    border: 1px solid rgb(0, 110, 255);
+}
+
+.titel{
+    font-size: 25px;
+}
