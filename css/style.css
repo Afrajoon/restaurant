@@ -11,11 +11,50 @@
 
 body{
     font-family: "yekan";
-    text-align: center;
+}
+
+.head{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 30px;
 }
 
 .head img{
     width: 120px;
+}
+
+.menu-icon{
+    height: 40px;
+    position: relative;
+    top: 40px;
+}
+
+.sidebar{
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 200px;
+    z-index: 999;
+    background-color: #ffffffa6;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sidebar ul li{
+    width: 100%;
+}
+
+.sidebar a{
+    text-decoration: none;
+    color: #000;
+}
+
+.sidebar a:hover{
+    background-color: rgb(180, 217, 250);
+    
 }
 
 .head button{
@@ -27,12 +66,12 @@ body{
     color: #fff;
     font-size: 15px;
     padding: 5px;
-    position: absolute;
-    left: 20px;
+    position: relative;
     top: 40px;
 }
 
 .pic-search-box{
+    text-align: center;
     height: 400px;
     background-image: url("../picture/10.jpg");
     background-repeat: no-repeat;
@@ -50,10 +89,23 @@ body{
 }
 
 .option{
+    width: 500px;
     display: flex; 
     justify-content: space-between;
     margin: 120px 0;
     font-size: 20px;
+}
+
+.option p{
+    position: relative;
+    left: 65px;
+}
+
+.menu-icons{
+    height: 50px;
+    position: relative;
+    bottom: 70px;
+    right: 20px;
 }
 
 .pic-search-box input{
@@ -107,9 +159,29 @@ body{
     color: #fff;
 }
 
-.menu-items .items .link img{
+.menu-items .items .link .image{
     border-radius: 10px;
     height: auto;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1)0px 16px 56px;
+}
+
+.menu-items .items .link p{
+    color: #000;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.menu-foods{
+    margin: 20px auto;
+    height: 200px;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1)0px 16px 56px;
+}
+
+.menu-foods img{
+    border-radius: 5px;
+    margin: 0 5px;
 }
 
 .roler{
@@ -117,5 +189,21 @@ body{
 }
 
 .titel{
+    text-align: center;
     font-size: 25px;
+}
+
+.rol{
+    display: inline-block;
+    border: 2px solid rgb(0, 110, 255);
+    height: 50px;
+}
+
+.titel1{
+    position: relative;
+    bottom: 40px;
+    right: 10px;
+    font-size: 25px;
+    font-family: 'ferdosi';
+    font-weight: bold;
 }
