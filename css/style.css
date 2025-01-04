@@ -3,6 +3,10 @@
     src: url(../font/0\ Yekan[ES_G_69].TTF);
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 *{
     box-sizing: border-box;
     margin: 0;
@@ -69,6 +73,7 @@ body{
     padding: 5px;
     position: relative;
     top: 40px;
+    cursor: pointer;
 }
 
 .pic-search-box{
@@ -93,7 +98,7 @@ body{
     width: 500px;
     display: flex; 
     justify-content: space-between;
-    margin: 120px 0;
+    margin: 120px auto;
     font-size: 20px;
 }
 
@@ -208,3 +213,5 @@ body{
     font-family: 'ferdosi';
     font-weight: bold;
 }
+
+/* کدهای فرم ثبت نام(signin) */
