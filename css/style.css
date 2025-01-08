@@ -1,6 +1,6 @@
 @font-face {
-    font-family: "yekan";
-    src: url(../font/0\ Yekan[ES_G_69].TTF);
+    font-family: "vazir";
+    src: url(../font/Vazirmatn-Regular.ttf);
 }
 
 html{
@@ -14,7 +14,7 @@ html{
 }
 
 body{
-    font-family: "yekan";
+    font-family: "vazir";
 }
 
 .head{
@@ -89,9 +89,8 @@ body{
 }
 
 .pic-search-box h2{
-    font-family: "ferdosi";
     line-height: 90px;
-    font-size: 30px;
+    font-size: 25px;
 }
 
 .option{
@@ -210,7 +209,6 @@ body{
     bottom: 40px;
     right: 10px;
     font-size: 25px;
-    font-family: 'ferdosi';
     font-weight: bold;
 }
 
