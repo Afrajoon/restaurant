@@ -31,38 +31,37 @@ body{
 .menu-icon{
     height: 40px;
     position: relative;
-    top: 40px;
+    left: 90px;
+    cursor: pointer;
 }
 
 .sidebar{
     display: none;
     position: fixed;
-    top: 60px;
-    right: 0;
-    height: 480px;
+    margin: 130px -55px;
+    height: 400px;
     width: 200px;
     z-index: 999;
-    background-color: #ffffffa6;
+    background-color: #ffffffbe;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
     line-height: 50px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1)0px 16px 56px;
 }
 
 .close{
-    position: relative;
-    bottom: 50px;
-    right: 15px;
-}
-
-.close:hover{
-    width: 50px;
-    background-color: red;
+    position: absolute;
+    top: -1px;
+    right: 40px;
 }
 
 .sidebar li{
     width: 100%;
     padding: 0 15px;
+    list-style-type: none;
+    position: relative;
+    top: 50px;
 }
 
 .sidebar a{
@@ -88,6 +87,10 @@ body{
     position: relative;
     top: 40px;
     cursor: pointer;
+}
+
+.head a{
+    text-decoration: none;
 }
 
 .pic-search-box{
@@ -148,7 +151,6 @@ body{
 
 .pic-search-box input[placeholder]{
     text-align: center;
-    font-family: "ferdosi";
     font-size: 15px;
 }
 
@@ -271,3 +273,82 @@ body{
 }
 
 /* کدهای فرم ثبت نام(signin) */
+.body-sign{
+    margin: 170px auto;
+    width: 250px;
+    height: 400px;
+    background-color: rgba(88, 88, 87, 0.493);
+    border-radius: 10px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1)0px 16px 56px;
+}
+
+.box-sign{
+    text-align: center;
+    position: relative;
+    top: 40px;
+}
+
+.box-sign2{
+    display: none;
+    text-align: center;
+    position: relative;
+    top: 40px;
+}
+
+.input-field{
+    border: 1px solid;
+    height: 30px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.input-field[placeholder]{
+    text-align: center;
+    font-size: 15px;
+}
+
+.button{
+    width: 150px;
+    background-color: aliceblue;
+    border-radius: 20px;
+    position: absolute;
+    top:520px;
+    right: 235px;
+    border: 1px solid;
+}
+
+.button button{
+    height: 30px;
+    font-size: 17px;
+    border: none;
+    background-color: lightgray;
+    width: 48%;
+    border-radius: 20px 0 0 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.button .back{
+    border-radius: 0 20px 20px 0;
+}
+
+.box-button{
+    position: absolute;
+    left: 245px;
+    top: 160px;
+}
+
+.login{
+    width: 60px;
+    height: 30px;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: aliceblue;
+    border: 1px solid;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.animation{
+    
+}

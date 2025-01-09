@@ -4,18 +4,31 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>login</title>
+    <title>ورود/ثبت نام</title>
 </head>
-<body>
+<body class="animation">
     <div class="body-sign">
+        <div class="box-button">
+                <button class="login" onclick="show_box()">ورود</button>
+                <button class="login" onclick="">ثبت نام</button>
+        </div>
+
         <div class="box-sign">
-                <input class="input-field" type="text" placeholder=":نام خود را وارد کنید ">
-                <input class="input-field" type="text" placeholder=":نام خانوادگی خود را وارد کنید ">
-                <input class="input-field" type="text" placeholder=":نام کاربری را وارد کنید ">
-                <input class="input-field" type="password" placeholder=" :گذرواژه را وارد کنید ">
-                <input class="input-field" type="tel" placeholder=":شماره تلفن خود را وارد کنید ">
-            <h3>حساب کاربری ندارید؟</h3>
-            <a href="signup.html">ایجاد حساب کاربری</a>
+            <input class="input-field" type="text" placeholder=":نام خود را وارد کنید ">
+            <input class="input-field" type="text" placeholder=":نام خانوادگی خود را وارد کنید ">
+            <input class="input-field" type="text" placeholder=":نام کاربری را وارد کنید ">
+            <input class="input-field" type="password" placeholder=" :گذرواژه را وارد کنید ">
+            <input class="input-field" type="tel" placeholder=":شماره تلفن خود را وارد کنید ">
+        </div>
+        <div class="box-sign2">
+            <input class="input-field" type="text" placeholder=":نام کاربری را وارد کنید ">
+            <input class="input-field" type="password" placeholder=" :گذرواژه را وارد کنید ">
+            <input class="input-field" type="number" placeholder=" :شماره اشتراک خود را وارد کنید">
+        </div>
+
+        <div class="button">
+            <a href="#"><button>تایید</button></a>
+            <a href="index.html"><button class="back">بازگشت</button></a>
         </div>
     </div>
 </body>
