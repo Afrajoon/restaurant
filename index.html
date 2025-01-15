@@ -3,34 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/rwd.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>سرآشپز</title>
 </head>
 <body>
     <!-- header -->
-    <div class="head">
-        <!-- جای لیست ها -->
-        <img onclick="show_sidebar()" class="menu-icon" src="picture/menu.svg" alt="menu">
-        
-        <nav>
-            <ul class="sidebar">
-                <img class="close menu-icon" onclick="hide_sidebar()" src="picture/close-b.svg" alt="close-menu">
-                <li><a href="index.html">خانه</a></li>
-                <li><a href="#">رزرو شده</a></li>
-                <li><a href="#">رزرو میز</a></li>
-                <li><a href="#footer">ارتباط با ما</a></li>
-            </ul>
-        </nav>
+    <div class="header">
+        <!-- اکتیو کردن منو با چکباکس -->
+        <input type="checkbox" class="checkbox">
 
-        <img src="picture/1.png" alt="logo">
-        <a href="login.html"><button type="button">ورود/عضویت</button></a>
+        <!-- ساخت خطوط منوی کشویی -->
+        <div class="hamburger-lines">
+            <span class="line line1"></span>
+            <span class="line line2"></span>
+            <span class="line line3"></span>
+        </div>
+
+        <!-- ایتم های داخل منوی کشویی -->
+        <div class="menu-items">
+            <li>
+            <a href="index.html">
+                <h2>خانه</h2>
+            </a>
+            </li>
+            <li>
+            <a href="#">
+                <h2>رزرو شده ها</h2>
+            </a>
+            </li>
+            <li>
+            <a href="#">
+                <h2>رزرو میز</h2>
+            </a>
+            </li>
+            <li>
+            <a href="#footer">
+                <h2>ارتباط با ما</h2>
+            </a>
+            </li>
+        </div>
+
+        <!-- لوگو سراشپز -->
+        <img class="pic-logo" src="picture/1.png" alt="logo">
+
+        <!-- دکمه ثبت نام -->
+        <a class="form" href="#logIn"><img src="picture/person.svg" alt="ثبت نام"></a>
+    </div>
+         
+    <!-- قسمت استایل دهی ب فرم ثبت نام -->
+    <div class="popup">
+        <div id="signIn" class="popupbox">
+            <div id="mymodal" class="modal">
+                محل قرارگیری فرم ثبت نام
+            </div>
+
+                <!--دکمه بستن صفحه-->
+                <a href="#" class="close"><p>بستن</p></a>
+        </div>
+
+        <div id="logIn" class="popupbox">
+            <div id="mymodal" class="modal">
+                <div class="body-sign">
+                    <!-- دکمه های ورود و ثبت نام -->
+                    <div class="box-button">
+                        <a href=""><button class="login" onclick="hide_box()">ورود</button></a>
+                        <a href=""><button class="login" onclick="show_box()">ثبت نام</button></a>
+                    </div>
+
+                    <!-- قسمت ثبت نام -->
+                    <div class="box-signup">
+                        <input class="input-field" type="text" placeholder=":نام خود را وارد کنید ">
+                        <input class="input-field" type="text" placeholder=":نام خانوادگی خود را وارد کنید ">
+                        <input class="input-field" type="text" placeholder=":نام کاربری را وارد کنید ">
+                        <input class="input-field" type="password" placeholder=" :گذرواژه را وارد کنید ">
+                        <input class="input-field" type="tel" placeholder=":شماره تلفن خود را وارد کنید ">
+                    </div>
+
+                    <!-- قسمت ورود -->
+                    <div class="box-signin">
+                        <input class="input-field" type="text" placeholder="نام کاربری را وارد کنید:">
+                        <input class="input-field" type="password" placeholder="گذرواژه را وارد کنید:">
+                        <input class="input-field" type="number" placeholder="شماره اشتراک خود را وارد کنید:">
+                    </div>
+
+                    <!-- قسمت دکمه های تایید و بازگشت -->
+                    <div class="button">
+                        <a href="#"><button>تایید</button></a>
+                        <hr style="display: inline;">
+                        <a href="index.html"><button class="back">بازگشت</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div class="pic-search-box">
         <h2>سفارش آنلاین غذا از رستوران سر آشپز</h2>
-        <button type="button">جستوجو</button>
-        <input type="search" name="" id="" placeholder="غذای مورد علاقتو اینجا سرچ کن">
+        <div class="content-search">
+            <input type="search" name="" id="" placeholder="غذای مورد علاقتو اینجا سرچ کن">
+            <button type="button">جستوجو</button>
+        </div>
         <div class="option">
             <img class="menu-icons" src="picture/storefront.svg"  alt="">
             <p>خرید آنلاین</p>
@@ -44,13 +116,13 @@
     <!-- section -->
     <div class="container">
         <!-- قسمت سبک غذاها -->
-        <h1 style="text-align: center;">روی سبک غذای مورد علاقت کلیک کن</h1>
-        <div class="menu-items"> <!-- container -->
+        <h1 style="text-align: center; background-color: #ff9aff; width: 400px; margin: 20px auto; border-radius: 10px;">روی سبک غذای مورد علاقت کلیک کن</h1>
+        <div class="menu-item"> <!-- container -->
             <div class="items"> <!-- items -->
                 <a class="link" href="#scroll-irani"><img class="image" src="picture/3.jpg" alt="ایرانی"></a>
             </div>
             <div class="items"> <!-- items -->
-                <a class="link" href="#scroll-fast-food"><img class="image" src="picture/4.jpg" alt="اش و سوپ"></a>
+                <a class="link" href="#scroll-fast-food"><img style="width: 200px; height: 90px;" class="image" src="picture/4.jpg" alt="اش و سوپ"></a>
             </div>
             <div class="items"> <!-- items -->
                 <a class="link" href="#scroll-estack"><img class="image" src="picture/5.jpg" alt="استیک"></a>
@@ -71,12 +143,14 @@
         <hr class="roler">
         <p class="titel">غذاهای ویژه(همبرگر مخصوص)</p>
         <hr class="roler">
-        <div class="menu-items">
+        <div class="menu-item">
             <div class="menu-foods">
                 <div class="items">
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/63.jpeg" alt="همبرگر">
                         <p>برگر تنوری مخصوص</p>
+                        <hr>
+                        <P class="price">قیمت:230/000</P>
                     </a>
                 </div>
             </div>
@@ -85,6 +159,8 @@
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/64.jpg" alt="همبرگر">
                         <p>برگر تنوری مخصوص</p>
+                        <hr>
+                        <P class="price">قیمت:230/000</P>
                     </a>
                 </div>
             </div>
@@ -93,6 +169,8 @@
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/65.jpg" alt="همبرگر">
                         <p>برگر تنوری مخصوص</p>
+                        <hr>
+                        <P class="price">قیمت:230/000</P>
                     </a>
                 </div>
             </div>
@@ -100,7 +178,9 @@
                 <div class="items">
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/66.jpg" alt="همبرگر">
-                        <p>قرمه سبزی</p>
+                        <p>برگر تنوری مخصوص</p>
+                        <hr>
+                        <P class="price">قیمت:230/000</P>
                     </a>
                 </div>
             </div>
@@ -109,6 +189,8 @@
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/67.jpg" alt="همبرگر">
                         <p>برگر تنوری مخصوص</p>
+                        <hr>
+                        <P class="price">قیمت:230/000</P>
                     </a>
                 </div>
             </div>
@@ -117,6 +199,8 @@
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/68.jpeg" alt="همبرگر">
                         <p>برگر تنوری مخصوص</p>
+                        <hr>
+                        <P class="price">قیمت:230/000</P>
                     </a>
                 </div>
             </div>
@@ -125,6 +209,8 @@
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/69.jpg" alt="همبرگر">
                         <p>برگر تنوری مخصوص</p>
+                        <hr>
+                        <P class="price">قیمت:230/000</P>
                     </a>
                 </div>
             </div>
@@ -133,6 +219,8 @@
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/70.png" alt="همبرگر">
                         <p>برگر تنوری مخصوص</p>
+                        <hr>
+                        <P class="price">قیمت:230/000</P>
                     </a>
                 </div>
             </div>
@@ -141,6 +229,8 @@
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/71.jpg" alt="همبرگر">
                         <p>برگر تنوری مخصوص</p>
+                        <hr>
+                        <P class="price">قیمت:230/000</P>
                     </a>
                 </div>
             </div>
@@ -150,12 +240,14 @@
         <hr class="roler">
         <p id="scroll-irani" class="titel">غذای ایرانی</p>
         <hr class="roler">
-        <div class="menu-items">
+        <div class="menu-item">
             <div class="menu-foods">
                 <div class="items">
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/9.jpg" alt="غذای ایرانی">
                         <p>قرمه سبزی</p>
+                        <hr>
+                        <P class="price">قیمت:230/000</P>
                     </a>
                 </div>
             </div>
@@ -164,6 +256,8 @@
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/10.jpg" alt="غذای ایرانی">
                         <p>مرغ ناردونی</p>
+                        <hr>
+                        <P class="price">قیمت:230/000</P>
                     </a>
                 </div>
             </div>
@@ -172,6 +266,8 @@
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/11.jpg" alt="غذای ایرانی">
                         <p>کوبیده و جوجه</p>
+                        <hr>
+                        <P class="price">قیمت:230/000</P>
                     </a>
                 </div>
             </div>
@@ -180,6 +276,8 @@
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/12.jpg" alt="غذای ایرانی">
                         <p>آبگوشت</p>
+                        <hr>
+                        <P class="price">قیمت:230/000</P>
                     </a>
                 </div>
             </div>
@@ -188,6 +286,8 @@
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/13.jpg" alt="غذای ایرانی">
                         <p>مرغ زعفرانی</p>
+                        <hr>
+                        <P class="price">قیمت:230/000</P>
                     </a>
                 </div>
             </div>
@@ -196,6 +296,8 @@
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/14.jpg" alt="غذای ایرانی">
                         <p>قاطی پلو</p>
+                        <hr>
+                        <P class="price">قیمت:230/000</P>
                     </a>
                 </div>
             </div>
@@ -204,6 +306,8 @@
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/15.jpg" alt="غذای ایرانی">
                         <p>دلمه</p>
+                        <hr>
+                        <P class="price">قیمت:230/000</P>
                     </a>
                 </div>
             </div>
@@ -212,6 +316,8 @@
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/16.jpg" alt="غذای ایرانی">
                         <p>کوفته</p>
+                        <hr>
+                        <P class="price">قیمت:230/000</P>
                     </a>
                 </div>
             </div>
@@ -220,53 +326,65 @@
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/17.jpeg" alt="غذای ایرانی">
                         <p>کباب برگ</p>
+                        <hr>
+                        <P class="price">قیمت:230/000</P>
                     </a>
                 </div>
             </div>
         </div>
 
          <!-- قسمت آش ها -->
-         <hr class="roler">
-         <p id="scroll-fast-food" class="titel">آش و سوپ</p>
-         <hr class="roler">
-         <div class="menu-items">
-             <div class="menu-foods">
+        <hr class="roler">
+        <p id="scroll-fast-food" class="titel">آش و سوپ</p>
+        <hr class="roler">
+        <div class="menu-item">
+            <div class="menu-foods">
                  <div class="items">
                      <a class="link" href="#">
                          <img style="width: 150px; height: 135px;" src="picture/18.jpg" alt="سوپ">
                          <p>برگر تنوری مخصوص</p>
+                         <hr>
+                         <P class="price">قیمت:230/000</P>
                      </a>
                  </div>
-             </div>
-             <div class="menu-foods">
+            </div>
+            <div class="menu-foods">
                  <div class="items">
                      <a class="link" href="#">
                          <img style="width: 150px; height: 135px;" src="picture/19.jpg" alt="سوپ">
                          <p>برگر تنوری مخصوص</p>
+                         <hr>
+                         <P class="price">قیمت:230/000</P>
                      </a>
                  </div>
-             </div>
-             <div class="menu-foods">
+            </div>
+            <div class="menu-foods">
                  <div class="items">
                      <a class="link" href="#">
                          <img style="width: 150px; height: 135px;" src="picture/20.jpg" alt="سوپ">
                          <p>برگر تنوری مخصوص</p>
+                         <hr>
+                         <P class="price">قیمت:230/000</P>
                      </a>
                  </div>
-             </div>
-             <div class="menu-foods">
+            </div>
+            <div class="menu-foods">
                  <div class="items">
                      <a class="link" href="#">
                          <img style="width: 150px; height: 135px;" src="picture/21.jpg" alt="سوپ">
                          <p>برگر تنوری مخصوص</p>
+                         <hr>
+                         <P class="price">قیمت:230/000</P>
                      </a>
                  </div>
-             </div>
-             <div class="menu-foods">
+            </div>
+            <div class="menu-foods">
                 <div class="items">
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/22.jpg" alt="سوپ">
                         <p>برگر تنوری مخصوص</p>
+                        <hr>
+                        <P class="price">قیمت:230/000</P>
                     </a>
                 </div>
             </div>
@@ -275,6 +393,8 @@
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/23.jpg" alt="سوپ">
                         <p>برگر تنوری مخصوص</p>
+                        <hr>
+                        <P class="price">قیمت:230/000</P>
                     </a>
                 </div>
             </div>
@@ -283,6 +403,8 @@
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/24.jpg" alt="سوپ">
                         <p>برگر تنوری مخصوص</p>
+                        <hr>
+                        <P class="price">قیمت:230/000</P>
                     </a>
                 </div>
             </div>
@@ -291,6 +413,8 @@
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/25.jpg" alt="سوپ">
                         <p>برگر تنوری مخصوص</p>
+                        <hr>
+                        <P class="price">قیمت:230/000</P>
                     </a>
                 </div>
             </div>
@@ -299,6 +423,8 @@
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/26.jpg" alt="سوپ">
                         <p>برگر تنوری مخصوص</p>
+                        <hr>
+                        <P class="price">قیمت:230/000</P>
                     </a>
                 </div>
             </div>
@@ -307,6 +433,8 @@
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/27.jpg" alt="اش">
                         <p>برگر تنوری مخصوص</p>
+                        <hr>
+                        <P class="price">قیمت:230/000</P>
                     </a>
                 </div>
             </div>
@@ -315,6 +443,8 @@
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/28.jpg" alt="اش">
                         <p>برگر تنوری مخصوص</p>
+                        <hr>
+                        <P class="price">قیمت:230/000</P>
                     </a>
                 </div>
             </div>
@@ -323,21 +453,25 @@
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/29.jpg" alt="اش">
                         <p>برگر تنوری مخصوص</p>
+                        <hr>
+                        <P class="price">قیمت:230/000</P>
                     </a>
                 </div>
             </div>
-         </div>
+        </div>
 
         <!-- قسمت استیک ها -->
         <hr class="roler">
         <p id="scroll-estack" class="titel">استیک</p>
         <hr class="roler">
-        <div class="menu-items">
+        <div class="menu-item">
             <div class="menu-foods">
                 <div class="items">
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/30.jpg" alt="استیک">
                         <p>برگر تنوری مخصوص</p>
+                        <hr>
+                        <P class="price">قیمت:230/000</P>
                     </a>
                 </div>
             </div>
@@ -346,6 +480,8 @@
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/31.jpg" alt="استیک">
                         <p>برگر تنوری مخصوص</p>
+                        <hr>
+                        <P class="price">قیمت:230/000</P>
                     </a>
                 </div>
             </div>
@@ -354,6 +490,8 @@
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/32.jpg" alt="استیک">
                         <p>برگر تنوری مخصوص</p>
+                        <hr>
+                        <P class="price">قیمت:230/000</P>
                     </a>
                 </div>
             </div>
@@ -362,6 +500,8 @@
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/33.jpg" alt="استیک">
                         <p>برگر تنوری مخصوص</p>
+                        <hr>
+                        <P class="price">قیمت:230/000</P>
                     </a>
                 </div>
             </div>
@@ -370,6 +510,8 @@
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/34.jpg" alt="استیک">
                         <p>برگر تنوری مخصوص</p>
+                        <hr>
+                        <P class="price">قیمت:230/000</P>
                     </a>
                 </div>
             </div>
@@ -378,6 +520,8 @@
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/35.jpg" alt="استیک">
                         <p>برگر تنوری مخصوص</p>
+                        <hr>
+                        <P class="price">قیمت:230/000</P>
                     </a>
                 </div>
             </div>
@@ -387,12 +531,14 @@
         <hr class="roler">
         <p id="scroll-pizza" class="titel">پیتزا</p>
         <hr class="roler">
-        <div class="menu-items">
+        <div class="menu-item">
             <div class="menu-foods">
                 <div class="items">
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/36.jpg" alt="پیتزا">
                         <p>برگر تنوری مخصوص</p>
+                        <hr>
+                        <P class="price">قیمت:230/000</P>
                     </a>
                 </div>
             </div>
@@ -401,6 +547,8 @@
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/37.jpg" alt="پیتزا">
                         <p>برگر تنوری مخصوص</p>
+                        <hr>
+                        <P class="price">قیمت:230/000</P>
                     </a>
                 </div>
             </div>
@@ -409,6 +557,8 @@
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/38.jpg" alt="پیتزا">
                         <p>برگر تنوری مخصوص</p>
+                        <hr>
+                        <P class="price">قیمت:230/000</P>
                     </a>
                 </div>
             </div>
@@ -417,6 +567,8 @@
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/39.jpg" alt="پیتزا">
                         <p>برگر تنوری مخصوص</p>
+                        <hr>
+                        <P class="price">قیمت:230/000</P>
                     </a>
                 </div>
             </div>
@@ -425,6 +577,8 @@
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/40.jpeg" alt="پیتزا">
                         <p>برگر تنوری مخصوص</p>
+                        <hr>
+                        <P class="price">قیمت:230/000</P>
                     </a>
                 </div>
             </div>
@@ -433,6 +587,8 @@
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/41.jpg" alt="پیتزا">
                         <p>برگر تنوری مخصوص</p>
+                        <hr>
+                        <P class="price">قیمت:230/000</P>
                     </a>
                 </div>
             </div>
@@ -441,6 +597,8 @@
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/42.jpg" alt="پیتزا">
                         <p>برگر تنوری مخصوص</p>
+                        <hr>
+                        <P class="price">قیمت:230/000</P>
                     </a>
                 </div>
             </div>
@@ -449,6 +607,8 @@
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/43.jpeg" alt="پیتزا">
                         <p>برگر تنوری مخصوص</p>
+                        <hr>
+                        <P class="price">قیمت:230/000</P>
                     </a>
                 </div>
             </div>
@@ -457,6 +617,8 @@
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/44.jpg" alt="پیتزا">
                         <p>برگر تنوری مخصوص</p>
+                        <hr>
+                        <P class="price">قیمت:230/000</P>
                     </a>
                 </div>
             </div>
@@ -466,12 +628,14 @@
         <hr class="roler">
         <p id="scroll-salad" class="titel">سالاد</p>
         <hr class="roler">
-        <div class="menu-items">
+        <div class="menu-item">
             <div class="menu-foods">
                 <div class="items">
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/53.jpg" alt="سالاد">
                         <p>برگر تنوری مخصوص</p>
+                        <hr>
+                        <P class="price">قیمت:230/000</P>
                     </a>
                 </div>
             </div>
@@ -480,6 +644,8 @@
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/45.jpg" alt="سالاد">
                         <p>برگر تنوری مخصوص</p>
+                        <hr>
+                        <P class="price">قیمت:230/000</P>
                     </a>
                 </div>
             </div>
@@ -488,6 +654,8 @@
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/46.jpg" alt="سالاد">
                         <p>برگر تنوری مخصوص</p>
+                        <hr>
+                        <P class="price">قیمت:230/000</P>
                     </a>
                 </div>
             </div>
@@ -496,6 +664,8 @@
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/47.jpg" alt="سالاد">
                         <p>برگر تنوری مخصوص</p>
+                        <hr>
+                        <P class="price">قیمت:230/000</P>
                     </a>
                 </div>
             </div>
@@ -504,6 +674,8 @@
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/48.jpg" alt="سالاد">
                         <p>برگر تنوری مخصوص</p>
+                        <hr>
+                        <P class="price">قیمت:230/000</P>
                     </a>
                 </div>
             </div>
@@ -512,6 +684,8 @@
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/49.jpg" alt="سالاد">
                         <p>برگر تنوری مخصوص</p>
+                        <hr>
+                        <P class="price">قیمت:230/000</P>
                     </a>
                 </div>
             </div>
@@ -520,6 +694,8 @@
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/50.jpg" alt="سالاد">
                         <p>برگر تنوری مخصوص</p>
+                        <hr>
+                        <P class="price">قیمت:230/000</P>
                     </a>
                 </div>
             </div>
@@ -528,6 +704,8 @@
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/51.jpg" alt="سالاد">
                         <p>برگر تنوری مخصوص</p>
+                        <hr>
+                        <P class="price">قیمت:230/000</P>
                     </a>
                 </div>
             </div>
@@ -536,6 +714,8 @@
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/52.jpg" alt="سالاد">
                         <p>برگر تنوری مخصوص</p>
+                        <hr>
+                        <P class="price">قیمت:230/000</P>
                     </a>
                 </div>
             </div>
@@ -545,12 +725,14 @@
         <hr class="roler">
         <p id="scroll-drink" class="titel">نوشیدنی ها</p>
         <hr class="roler">
-        <div class="menu-items">
+        <div class="menu-item">
             <div class="menu-foods">
                 <div class="items">
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/54.jpg" alt="نوشیدنی">
                         <p>نوشابه زرد تگگی</p>
+                        <hr>
+                        <P class="price">قیمت:230/000</P>
                     </a>
                 </div>
             </div>
@@ -559,6 +741,8 @@
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/55.jpg" alt="نوشیدنی">
                         <p>نوشابه مشکی تگگی</p>
+                        <hr>
+                        <P class="price">قیمت:230/000</P>
                     </a>
                 </div>
             </div>
@@ -567,6 +751,8 @@
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/56.jpg" alt="نوشیدنی">
                         <p>دلستر هلویی</p>
+                        <hr>
+                        <P class="price">قیمت:230/000</P>
                     </a>
                 </div>
             </div>
@@ -575,6 +761,8 @@
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/57.jpg" alt="نوشیدنی">
                         <p>نوشابه پپسی</p>
+                        <hr>
+                        <P class="price">قیمت:230/000</P>
                     </a>
                 </div>
             </div>
@@ -583,6 +771,8 @@
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/58.jpg" alt="نوشیدنی">
                         <p>دلستر شاتوت</p>
+                        <hr>
+                        <P class="price">قیمت:230/000</P>
                     </a>
                 </div>
             </div>
@@ -591,6 +781,8 @@
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/59.jpg" alt="نوشیدنی">
                         <p>انرژی زا بوم بوم</p>
+                        <hr>
+                        <P class="price">قیمت:230/000</P>
                     </a>
                 </div>
             </div>
@@ -599,6 +791,8 @@
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/60.jpg" alt="نوشیدنی">
                         <p>دوغ هشت گیاه</p>
+                        <hr>
+                        <P class="price">قیمت:230/000</P>
                     </a>
                 </div>
             </div>
@@ -607,6 +801,8 @@
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/61.jpg" alt="نوشیدنی">
                         <p>دوغ گل محمدی و نعنا</p>
+                        <hr>
+                        <P class="price">قیمت:230/000</P>
                     </a>
                 </div>
             </div>
@@ -615,6 +811,8 @@
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/62.jpg" alt="نوشیدنی">
                         <p>دوغ نعنا خیار</p>
+                        <hr>
+                        <P class="price">قیمت:230/000</P>
                     </a>
                 </div>
             </div>
@@ -638,8 +836,8 @@
                 <a href="#" title="328756"><img class="menu-icon-for-virtual-space" src="picture/fax_w.svg" alt="فکس"></a>
                 <a href="#" title="برج میلاد،طبقه2،رستوران سرآشپز"><img class="menu-icon-for-virtual-space" src="picture/pin_drop_w.svg" alt="نشانی"></a>
             </div>
-            <div class="contact-to-viryual">
-                <a href="#" title="Codein.83"><img class="menu-icon-for-virtual-space" src="picture/instagram.svg" alt="نشانی اینستاگرام"></a>
+            <div class="contact-to-virtual">
+                <a href="https://www.instagram.com/[Codein.83]" title="Codein.83"><img class="menu-icon-for-virtual-space" src="picture/instagram.svg" alt="نشانی اینستاگرام"></a>
                 <a href="#" title="Afi_83"><img class="menu-icon-for-virtual-space" src="picture/telegram.svg" alt="نشانی تلگرام"></a>
                 <a href="#" title="facebook"><img class="menu-icon-for-virtual-space" src="picture/facebook.svg" alt="نشانی فیسبوک"></a>
             </div>
