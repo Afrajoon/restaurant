@@ -256,7 +256,7 @@ body{
 }
 
 .option{
-    height: 30%;
+    /* height: 30%; */
     display: flex; 
     justify-content: space-between;
     align-items: center;
@@ -288,15 +288,19 @@ body{
 }
 
 .menu-item{
-    /* display: flex;
-    flex-wrap: wrap; */
+    width: 100%;
     margin: 25px 0;
     display: grid;
     grid-template-columns: repeat(5,1fr);
+    place-items: center;
 }
 
 .items{
+    width: 100%;
     margin: 10px auto;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    place-items: center;
 }
 
 .link{
@@ -384,26 +388,15 @@ body{
     text-align: justify;
 }
 
-.contact-to-tel{
+.virtual{
     display: flex;
+    justify-content: center;
     position: relative;
-    position: relative;
-    bottom: 65px;
-}
-
-.contact-to-virtual{
-    display: flex;
-    justify-self: end;
-    position: relative;
-    position: relative;
-    bottom: 110px;
+    bottom: 50px;
 }
 
 .menu-icon-for-virtual-space{
     height: 30px;
-    margin-left: 10px;
-    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1)0px 16px 56px;
-
 }
 
 .copy-right{
@@ -542,5 +535,42 @@ body{
     .menu-item{
         width: 100%;
         grid-template-columns: repeat(2,1fr);
+    }
+
+    .pic-search-box h2{
+        font-size: 18px;
+    }
+
+    .option{
+        width: 100%;
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .about img{
+        width: 450px;
+    }
+
+    .virtual{
+        display: block;
+        position: relative;
+        bottom: 300px;
+    }
+
+    .contact-to-tel{
+        width: 20px;
+        position: relative;
+        left: 220px;
+        margin-bottom: 10px;
+    }
+
+    .contact-to-virtual{
+        width: 20px;
+        position: relative;
+        left: 220px;
+        /* display: flex; */
+    }
+
+    .menu-icon-for-virtual-space{
+        height: 25px;
     }
 }
