@@ -51,47 +51,36 @@
     </div>
          
     <!-- قسمت استایل دهی ب فرم ثبت نام -->
-    <div class="popup">
-        <div id="signIn" class="popupbox">
-            <div id="mymodal" class="modal">
-                محل قرارگیری فرم ثبت نام
-            </div>
+    <div id="logIn" class="popupbox">
+        <div id="mymodal" class="modal">
+            <div class="body-sign">
+                <!-- دکمه های ورود و ثبت نام -->
+                <div class="box-button">
+                    <a href="#"><button class="login" onclick="show_box_signin()">ورود</button></a>
+                    <a href="#"><button class="login" onclick="show_box_signup()">ثبت نام</button></a>
+                </div>
 
-                <!--دکمه بستن صفحه-->
-                <a href="#" class="close"><p>بستن</p></a>
-        </div>
+                <!-- قسمت ثبت نام -->
+                <div class="box-signup">
+                    <input class="input-field" type="text" placeholder=":نام خود را وارد کنید ">
+                    <input class="input-field" type="text" placeholder=":نام خانوادگی خود را وارد کنید ">
+                    <input class="input-field" type="text" placeholder=":نام کاربری را وارد کنید ">
+                    <input class="input-field" type="password" placeholder=" :گذرواژه را وارد کنید ">
+                    <input class="input-field" type="tel" placeholder=":شماره تلفن خود را وارد کنید ">
+                </div>
 
-        <div id="logIn" class="popupbox">
-            <div id="mymodal" class="modal">
-                <div class="body-sign">
-                    <!-- دکمه های ورود و ثبت نام -->
-                    <div class="box-button">
-                        <a href=""><button class="login" onclick="hide_box()">ورود</button></a>
-                        <a href=""><button class="login" onclick="show_box()">ثبت نام</button></a>
-                    </div>
+                <!-- قسمت ورود -->
+                <div class="box-signin">
+                    <input class="input-field" type="text" placeholder="نام کاربری را وارد کنید:">
+                    <input class="input-field" type="password" placeholder="گذرواژه را وارد کنید:">
+                    <input class="input-field" type="number" placeholder="شماره اشتراک خود را وارد کنید:">
+                </div>
 
-                    <!-- قسمت ثبت نام -->
-                    <div class="box-signup">
-                        <input class="input-field" type="text" placeholder=":نام خود را وارد کنید ">
-                        <input class="input-field" type="text" placeholder=":نام خانوادگی خود را وارد کنید ">
-                        <input class="input-field" type="text" placeholder=":نام کاربری را وارد کنید ">
-                        <input class="input-field" type="password" placeholder=" :گذرواژه را وارد کنید ">
-                        <input class="input-field" type="tel" placeholder=":شماره تلفن خود را وارد کنید ">
-                    </div>
-
-                    <!-- قسمت ورود -->
-                    <div class="box-signin">
-                        <input class="input-field" type="text" placeholder="نام کاربری را وارد کنید:">
-                        <input class="input-field" type="password" placeholder="گذرواژه را وارد کنید:">
-                        <input class="input-field" type="number" placeholder="شماره اشتراک خود را وارد کنید:">
-                    </div>
-
-                    <!-- قسمت دکمه های تایید و بازگشت -->
-                    <div class="button">
-                        <a href="#"><button>تایید</button></a>
-                        <hr style="display: inline;">
-                        <a href="index.html"><button class="back">بازگشت</button></a>
-                    </div>
+                <!-- قسمت دکمه های تایید و بازگشت -->
+                <div class="button">
+                    <a href="#"><button>تایید</button></a>
+                    <hr style="display: inline;">
+                    <a href="index.html"><button class="back">بازگشت</button></a>
                 </div>
             </div>
         </div>
@@ -117,7 +106,7 @@
     <div class="container">
         <!-- قسمت سبک غذاها -->
         <h1 style="text-align: center; background-color: #ff9aff; width: 400px; margin: 20px auto; border-radius: 10px;">روی سبک غذای مورد علاقت کلیک کن</h1>
-        <div class="menu-item"> <!-- container -->
+        <div class="select-foods"> <!-- container -->
             <div class="items"> <!-- items -->
                 <a class="link" href="#scroll-irani"><img class="image" src="picture/3.jpg" alt="ایرانی"></a>
             </div>
@@ -821,6 +810,47 @@
         <!-- قسمت اموزشی -->
         <hr class="rol">
         <p class="titel1">آموزشی</p>
+        <div class="carousel">
+            <div class="carousel-item">
+                <div class="carousel-box">
+                    <p class="carousel-title">لازانیا بقچه ای</p>
+                    <p class="num">1</p>
+                    <a href=""><img src="picture/79.jpg" alt="لازانیا بقچه ای"></a>
+                </div>
+            </div>
+        
+            <div class="carousel-item">
+                <div class="carousel-box">
+                    <p class="carousel-title">شیرینی بهشتی</p>
+                    <p class="num">2</p>
+                    <a href=""><img src="picture/80.jpg" alt="شیرینی بهشتی"></a>
+                </div>
+            </div>
+    
+            <div class="carousel-item">
+                <div class="carousel-box">
+                    <p class="carousel-title">سیب زمینی پنیری</p>
+                    <p class="num">3</p>
+                    <a href=""><img src="picture/81.jpg" alt="سیب زمینی پنیری"></a>
+                </div>
+            </div>
+    
+            <div class="carousel-item">
+                <div class="carousel-box">
+                    <p class="carousel-title">پنکیک موزی</p>
+                    <p class="num">4</p>
+                    <a href=""><img src="picture/82.jpg" alt="پنکیک موزی"></a>
+                </div>
+            </div>
+        
+            <div class="carousel-item">
+                <div class="carousel-box">
+                    <p class="carousel-title">دسر رژیمی</p>
+                    <p class="num">5</p>
+                    <a href=""><img src="picture/83.jpg" alt="دسر رژیمی"></a>
+                </div>
+            </div>    
+        </div>
     </div>
 
     <!-- footer -->
@@ -828,7 +858,7 @@
         <div class="about">
             <h2>سرآشپز،پلتفرم سفارش آنلاین غذا</h2>
             <p>رستوران ما با انواع غذاهای خوشمزه وبا کیفیت،آماده است  تا لحظات شماراخاطره انگیز کند.با رستوران ما طعم واقعی غذاهای خانگی را به مجالس خود بیاورید.ما درارائه انواع غذاهای سنتی و مدرن متخصص هستیم و کیفیت و طعم بی نظیر را تضمین میکنیم.مطمئن باشید که سفارشات شمارا با عشق و دقت تهیه و ارسال میکنیم.</p>
-            <img src="picture/72.png" alt="عکس غذا">
+            <img class="pic-footer" src="picture/72.png" alt="عکس غذا">
             <div class="virtual">
                 <div class="contact-to-tel">
                     <a href="#" title="afra.138381@gmail.com"><img class="menu-icon-for-virtual-space" src="picture/mail.svg" alt="ادرس ایمیل"></a>
