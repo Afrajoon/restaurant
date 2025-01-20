@@ -12,6 +12,28 @@ function show_box_signup(){
     signin.style.display='none';
 }
 
+function show_list_sefaresh(){
+  const show_menu= document.querySelector('.list-sefaresh');
+  show_menu.style.display='block'
+}
+
+function hide_list_sefaresh(){
+  const hide_menu= document.querySelector('.list-sefaresh');
+  hide_menu.style.display='none'
+}
+
+function show_list_reserve(){
+  const show_menu= document.querySelector('.reserve-list');
+  show_menu.style.display='block'
+}
+
+function show_visite_reserve(){
+  const show_menu= document.querySelector('.visite-reserve');
+  show_menu.style.display='block'
+  const hide_menu= document.querySelector('.reserve-list');
+  hide_menu.style.display='none'
+}
+
 
 let startX = 0;
 let active = 0;

@@ -203,7 +203,7 @@ body{
 
 .pic-search-box h2{
     line-height: 90px;
-    font-size: 24px;
+    font-size: 18px;
     text-align: center;
 }
 
@@ -261,7 +261,7 @@ body{
     display: flex; 
     justify-content: space-between;
     align-items: center;
-    margin: 100px auto;
+    margin: 100px auto 0;
     font-size: 18px;
 }
 
@@ -278,6 +278,7 @@ body{
 }
 
 .container{
+    display: grid;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 35px;
@@ -291,7 +292,7 @@ body{
 /* مربوط به منوی غذاها */
 .select-foods{
     width: 100%;
-    margin: 25px auto;
+    margin: 45px auto;
     display: grid;
     grid-template-columns: repeat(2,1fr);
     place-items: center;
@@ -299,7 +300,7 @@ body{
 
 .menu-item{
     width: 100%;
-    margin: 25px 0;
+    margin: 25px auto;
     display: grid;
     grid-template-columns: repeat(2,1fr);
     place-items: center;
@@ -311,6 +312,7 @@ body{
     display: grid;
     grid-template-columns: repeat(5,1fr);
     place-items: center;
+    place-self: center;
 }
 
 .link{
@@ -495,15 +497,38 @@ body{
     text-align: justify;
 }
 
+.pic-footer{
+    width: 440px;
+    position: relative;
+    bottom: 60px;
+    right: 10px;
+}
+
 .virtual{
-    display: flex;
-    justify-content: center;
-    position: sticky;
-    top: 0px;
+    width: 50px;
+    height: 200px;
+    display: block;
+    position: relative;
+    top: -360px;
+    right: 210px;
+}
+
+.contact-to-tel{
+    width: 20px;
+    position: relative;
+    left: 220px;
+    margin-bottom: 5px;
+}
+
+.contact-to-virtual{
+    width: 20px;
+    position: relative;
+    left: 220px;
 }
 
 .menu-icon-for-virtual-space{
-    height: 30px;
+    height: 25px;
+    margin-bottom: 10px;
 }
 
 .copy-right{
@@ -513,6 +538,199 @@ body{
     text-align: center;
     box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1)0px 16px 56px;
 }
+
+/* لیست سفارش غذا */
+.list-sefaresh{
+    display: none;
+    position: fixed;
+    top: 100px;
+    background-image: url("../picture/87.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    pointer-events: none;
+    z-index: 8888 !important;
+    width: 400px;
+    height: 600px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1)0px 16px 56px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.item-food{
+    display: grid;
+    justify-content: space-around;
+    margin-top: -20px;
+    margin-bottom: 25px;
+}
+
+.item-food input{
+    height: 30px;
+    border-radius: 5px;
+    margin: 15px 0;
+}
+
+.item-food label{
+    font-weight: bolder;
+}
+
+.button-sefaresh{
+    margin-top: 30px;
+}
+
+.button-sefaresh input{
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid;
+    padding: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1)0px 16px 56px;
+    margin-right: -5px;
+    margin-left: 100px;
+}
+
+.button-sefaresh ::placeholder{
+    color: black;
+}
+
+.button-sefaresh button{
+    width: 80px;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid;
+    padding: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1)0px 16px 56px;
+    cursor: pointer;
+}
+
+.button-sefaresh button:hover{
+    background-color: #fcb1fc2c;
+}
+
+.pic-food{
+    width: 100px;
+    margin: 20px auto;
+}
+
+/* لیست رزرو میز */
+.reserve{
+}
+
+.reserve-list{
+    display: none;
+    position: fixed;
+    top: 250px;
+    left: 20px;
+    right: 20px;
+    background-image: url("../picture/85.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 445px;
+    height: 241px;
+    z-index: 8888 !important;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1)0px 16px 56px;
+    border-radius: 20px;
+}
+
+.checkboxx{
+    opacity: 1;
+    display: inline-block;
+    width: 160px;
+    position: relative;
+    top: -40px;
+    right: 160px;
+    cursor: pointer;
+}
+
+.button-reserve{
+    position: relative;
+    right: 15px;
+    top: -117px;
+}
+
+.button-reserve button{
+    height: 30px;
+    width: 65px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.button-reserve a{
+    text-decoration: none;
+    color: #000000;
+    font-size: 15px;
+    line-height: 50px;
+}
+
+.button-reserve button:hover{
+    background-color: #fcb1fc;
+}
+
+.button-reserve a:hover{
+    color: #fc34fc;
+    font-weight: bold;
+}
+
+.pic-reserve{
+    width: 70px;
+    margin: 20px 45px;
+}
+
+.reserve-item{
+    display: grid;
+    justify-content: end;
+    line-height: 40px;
+    margin: -105px 0 0 20px;
+}
+
+.reserve-item input{
+    border-radius: 5px;
+    height: 25px;
+}
+
+/* مشاهده لیست رزرو */
+.visite-reserve{
+
+}
+
+.visite-list{
+    display: none;
+    position: fixed;
+    top: 250px;
+    left: 20px;
+    right: 20px;
+    background-image: url("../picture/85.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 445px;
+    height: 241px;
+    z-index: 8888 !important;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1)0px 16px 56px;
+    border-radius: 20px;
+}
+
+.visite-item{
+    display: grid;
+    justify-content: end;
+    line-height: 40px;
+    margin: -105px 0 0 50px;
+}
+
+.visite-checkbox{
+    opacity: 1;
+    display: inline-block;
+    width: 160px;
+    position: relative;
+    top: -40px;
+    right: 160px;
+    cursor: pointer;
+}
+
+
 
 /* کدهای فرم ثبت نام(login) */
 .body-sign{
@@ -608,10 +826,6 @@ body{
     transition: opacity 250ms;
     pointer-events: none;
     opacity: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1)0px 16px 56px;
     z-index: 9999 !important;
 }
@@ -621,88 +835,21 @@ body{
     pointer-events: auto;
 }
 
-.modal .modalform {
-    background: white;
-    width: 90%;
-    height: 200px;
-    max-width: 600px;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    -webkit-box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.51);
-    -moz-box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.51);
-    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.51);
-}
-
 
 
 
 /* ریسپانسیو */
-
-@media (min-width:380px) and (max-width: 768px) {
-    .menu-item{
-        width: 100%;
-        grid-template-columns: repeat(2,1fr);
-    }
-
-    .pic-search-box h2{
-        font-size: 18px;
-    }
-
-    .option{
-        width: 100%;
-        grid-template-columns: repeat(2,1fr);
-    }
-
-    .pic-footer{
-        width: 450px;
-        position: relative;
-        bottom: 60px;
-    }
-
-    .virtual{
-        width: 50px;
-        height: 200px;
-        display: block;
-        position: relative;
-        top: -370px;
-        right: 210px;
-    }
-
-    .contact-to-tel{
-        width: 20px;
-        position: relative;
-        left: 220px;
-        margin-bottom: 10px;
-    }
-
-    .contact-to-virtual{
-        width: 20px;
-        position: relative;
-        left: 220px;
-        /* display: flex; */
-    }
-
-    .menu-icon-for-virtual-space{
-        height: 25px;
-    }
-}
-
-@media (min-width:570px) and (max-width:580px) {
-    
-}
-
 @media (min-width:700px) {
     .select-foods{
+        margin: 25px auto;
         grid-template-columns: repeat(3,1fr);
         place-items: center;
     }
+}
 
+@media (min-width:700px) and (max-width: 900px) {
     .menu-item{
-        margin: 0 30px;
+        margin: 0 auto;
         display: grid;
         grid-template-columns: repeat(3,1fr);
         place-items: center;
@@ -710,16 +857,16 @@ body{
 
     .pic-footer{
         width: 280px;
-        height: 350px;
+        height: 320px;
         position: relative;
-        bottom: 100px;
+        bottom: 75px;
         right: 200px;
     }
     
     .virtual{
         display: flex;
         position: relative;
-        top: -450px;
+        top: -410px;
         left: 250px;
     }
 
@@ -741,15 +888,84 @@ body{
         padding: 5px;
         height: 40px;
         border-radius: 10px;
+        border: 4px double white;
         background-color: rgba(240, 36, 213, 0.685);
     }
 }
 
 @media (min-width:900px) {
     .menu-item{
-        margin: 0 30px;
+        margin: 0 auto;
         display: grid;
         grid-template-columns: repeat(4,1fr);
         place-items: center;
+    }
+
+    .pic-footer{
+        width: 380px;
+        height: 330px;
+        position: relative;
+        bottom: 95px;
+        right: 200px;
+    }
+    
+    .virtual{
+        display: flex;
+        position: relative;
+        top: -450px;
+        left: 250px;
+    }
+
+    .contact-to-tel{
+        margin-right: 10px;
+    }
+
+    .contact-to-virtual{
+        position: relative;
+        right: -70px;
+        top: 129px;
+        margin-right: 30px;
+    }
+
+    .menu-icon-for-virtual-space{
+        display: block;
+        width: 170px;
+        margin: 15px 30px;
+        padding: 5px;
+        height: 50px;
+        border-radius: 10px;
+        border: 4px double white;
+        background-color: rgba(240, 36, 213, 0.685);
+    }
+}
+
+@media (min-width: 1000px) {  
+    .pic-footer{
+        width: 465px;
+        height: 340px;
+        position: relative;
+        bottom: 110px;
+        right: 260px;
+    }
+
+    .virtual{
+        position: relative;
+        top: -480px;
+        left: 250px;
+    }
+
+    .contact-to-tel{
+        margin: 0 20px 0 40px;
+    }
+
+    .menu-icon-for-virtual-space{
+        display: block;
+        width: 230px;
+        margin: 15px 30px;
+        padding: 5px;
+        height: 50px;
+        border-radius: 10px;
+        border: 4px double white;
+        background-color: rgba(240, 36, 213, 0.685);
     }
 }

@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html dir="rtl" lang="fa-IR">
 <head>
     <meta charset="UTF-8">
@@ -27,12 +26,7 @@
             </a>
             </li>
             <li>
-            <a href="#">
-                <h2>رزرو شده ها</h2>
-            </a>
-            </li>
-            <li>
-            <a href="#">
+            <a href="#reserve" onclick="show_list_reserve()">
                 <h2>رزرو میز</h2>
             </a>
             </li>
@@ -52,36 +46,34 @@
          
     <!-- قسمت استایل دهی ب فرم ثبت نام -->
     <div id="logIn" class="popupbox">
-        <div id="mymodal" class="modal">
-            <div class="body-sign">
-                <!-- دکمه های ورود و ثبت نام -->
-                <div class="box-button">
-                    <a href="#"><button class="login" onclick="show_box_signin()">ورود</button></a>
-                    <a href="#"><button class="login" onclick="show_box_signup()">ثبت نام</button></a>
-                </div>
+        <div class="body-sign">
+            <!-- دکمه های ورود و ثبت نام -->
+            <div class="box-button">
+                <a href="#"><button class="login" onclick="show_box_signin()">ورود</button></a>
+                <a href="#"><button class="login" onclick="show_box_signup()">ثبت نام</button></a>
+            </div>
 
-                <!-- قسمت ثبت نام -->
-                <div class="box-signup">
-                    <input class="input-field" type="text" placeholder=":نام خود را وارد کنید ">
-                    <input class="input-field" type="text" placeholder=":نام خانوادگی خود را وارد کنید ">
-                    <input class="input-field" type="text" placeholder=":نام کاربری را وارد کنید ">
-                    <input class="input-field" type="password" placeholder=" :گذرواژه را وارد کنید ">
-                    <input class="input-field" type="tel" placeholder=":شماره تلفن خود را وارد کنید ">
-                </div>
+            <!-- قسمت ثبت نام -->
+            <div class="box-signup">
+                <input class="input-field" type="text" placeholder=":نام خود را وارد کنید ">
+                <input class="input-field" type="text" placeholder=":نام خانوادگی خود را وارد کنید ">
+                <input class="input-field" type="text" placeholder=":نام کاربری را وارد کنید ">
+                <input class="input-field" type="password" placeholder=" :گذرواژه را وارد کنید ">
+                <input class="input-field" type="tel" placeholder=":شماره تلفن خود را وارد کنید ">
+            </div>
 
-                <!-- قسمت ورود -->
-                <div class="box-signin">
-                    <input class="input-field" type="text" placeholder="نام کاربری را وارد کنید:">
-                    <input class="input-field" type="password" placeholder="گذرواژه را وارد کنید:">
-                    <input class="input-field" type="number" placeholder="شماره اشتراک خود را وارد کنید:">
-                </div>
+            <!-- قسمت ورود -->
+            <div class="box-signin">
+                <input class="input-field" type="text" placeholder="نام کاربری را وارد کنید:">
+                <input class="input-field" type="password" placeholder="گذرواژه را وارد کنید:">
+                <input class="input-field" type="number" placeholder="شماره اشتراک خود را وارد کنید:">
+            </div>
 
-                <!-- قسمت دکمه های تایید و بازگشت -->
-                <div class="button">
-                    <a href="#"><button>تایید</button></a>
-                    <hr style="display: inline;">
-                    <a href="index.html"><button class="back">بازگشت</button></a>
-                </div>
+            <!-- قسمت دکمه های تایید و بازگشت -->
+            <div class="button">
+                <a href="#"><button>تایید</button></a>
+                <hr style="display: inline;">
+                <a href="index.html"><button class="back">بازگشت</button></a>
             </div>
         </div>
     </div>
@@ -104,6 +96,91 @@
 
     <!-- section -->
     <div class="container">
+
+        <!-- لیست رزرو میز -->
+         <div class="reserve">
+            <div id="visit-list-reserve" class="reserve-list">
+                <img src="picture/1.png" alt="لوگو سرآشپز" class="pic-reserve">
+                <div class="reserve-item">
+                    <label for="">تاریخ رزرو میز مشخص کنید:</label>
+                    <input type="datetime-local">
+                    <label for="">برای چه تعداد میخواهید میز رزرو کنید:</label>
+                    <input type="number">
+                    <label for="">شماره اشتراک را وارد کنید:</label>
+                    <input type="number" name="" id="">
+                    <label for="">میز رزرو شده VIP باشد؟</label>
+                    <div class="checkboxx">
+                        <label>بله
+                        <input type="radio" name="select">
+                        </label>
+                        <label>خیر
+                        <input type="radio" name="select">
+                        </label>
+                    </div>
+                </div>
+                <!-- <hr style="display: inline; height: 400px;"> -->
+                <div class="button-reserve">
+                    <a href="#"><button>رزرو کردن</button></a>
+                    <a href="index.html"><button>بازگشت</button></a>
+                    <a href="#" onclick=" show_visite_reserve()"><p>مشاهده لیست رزرو</p></a>
+                </div>
+            </div>
+         </div>
+
+         <!-- مشاهده میز رزرو شده -->
+         <div class="visite-reserve">
+            <div class="visite-list">
+                <img src="picture/1.png" alt="لوگو سرآشپز" class="pic-reserve">
+                <div class="visite-item">
+                    <label for="">تاریخ رزرو میز:</label>
+                    <input type="datetime-local">
+                    <label for="">تعداد میز رزرو شده:</label>
+                    <input type="number">
+                    <label for="">شماره اشتراک:</label>
+                    <input type="number" name="" id="">
+                    <label for="">میز رزرو شده VIP است؟</label>
+                    <div class="visite-checkbox">
+                        <label>بله
+                        <input type="radio" name="select">
+                        </label>
+                        <label>خیر
+                        <input type="radio" name="select">
+                        </label>
+                    </div>
+                </div>
+                <!-- <hr style="display: inline; height: 500px;"> -->
+                <div class="button-reserve">
+                    <a href="#"><button>لغو رزرو</button></a>
+                    <a href="#visit-list-reserve"><button>بازگشت</button></a>
+                </div>
+            </div>
+         </div>
+
+        <!-- لیست سفارش -->
+        <!-- <div class="popupbox"> -->
+            <div class="list-sefaresh">
+                <div class="name-food">
+                    <img src="picture/1.png" alt="لوگو سرآشپز" class="pic-food">
+                    <div class="item-food">
+                        <label for="">چه غذایی سفارش دادین؟</label>
+                        <input type="text">
+                        <label for="">نوشیدنی چی میل دارین؟</label>
+                        <input type="text">
+                        <label for="">به عنوان دسر چی دوست دارین بخورین؟</label>
+                        <input type="text">
+                        <label for="">برای چند نفر میخای سفارش بدی؟</label>
+                        <input type="number" name="" id="">
+                    </div>
+                </div>
+                <hr class="roler">
+                <div class="button-sefaresh">
+                    <input type="number" name="" id="" placeholder="شماره اشتراک">
+                    <a href="#"><button>ثبت سفارش</button></a>
+                    <a href="index.html" onclick="hide_list_sefaresh()"><button>بازگشت</button></a>
+                </div>
+            </div>
+        <!-- </div> -->
+        
         <!-- قسمت سبک غذاها -->
         <h1 style="text-align: center; background-color: #ff9aff; width: 400px; margin: 20px auto; border-radius: 10px;">روی سبک غذای مورد علاقت کلیک کن</h1>
         <div class="select-foods"> <!-- container -->
@@ -133,7 +210,7 @@
         <p class="titel">غذاهای ویژه(همبرگر مخصوص)</p>
         <hr class="roler">
         <div class="menu-item">
-            <div class="menu-foods">
+            <div class="menu-foods" onclick="show_list_sefaresh()">
                 <div class="items">
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/63.jpeg" alt="همبرگر">
@@ -143,7 +220,7 @@
                     </a>
                 </div>
             </div>
-            <div class="menu-foods">
+            <div class="menu-foods" onclick="show_list_sefaresh()">
                 <div class="items">
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/64.jpg" alt="همبرگر">
@@ -153,7 +230,7 @@
                     </a>
                 </div>
             </div>
-            <div class="menu-foods">
+            <div class="menu-foods" onclick="show_list_sefaresh()">
                 <div class="items">
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/65.jpg" alt="همبرگر">
@@ -163,7 +240,7 @@
                     </a>
                 </div>
             </div>
-            <div class="menu-foods">
+            <div class="menu-foods" onclick="show_list_sefaresh()">
                 <div class="items">
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/66.jpg" alt="همبرگر">
@@ -173,7 +250,7 @@
                     </a>
                 </div>
             </div>
-            <div class="menu-foods">
+            <div class="menu-foods" onclick="show_list_sefaresh()">
                 <div class="items">
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/67.jpg" alt="همبرگر">
@@ -183,7 +260,7 @@
                     </a>
                 </div>
             </div>
-            <div class="menu-foods">
+            <div class="menu-foods" onclick="show_list_sefaresh()">
                 <div class="items">
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/68.jpeg" alt="همبرگر">
@@ -193,7 +270,7 @@
                     </a>
                 </div>
             </div>
-            <div class="menu-foods">
+            <div class="menu-foods" onclick="show_list_sefaresh()">
                 <div class="items">
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/69.jpg" alt="همبرگر">
@@ -203,7 +280,7 @@
                     </a>
                 </div>
             </div>
-            <div class="menu-foods">
+            <div class="menu-foods" onclick="show_list_sefaresh()">
                 <div class="items">
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/70.png" alt="همبرگر">
@@ -213,7 +290,7 @@
                     </a>
                 </div>
             </div>
-            <div class="menu-foods">
+            <div class="menu-foods" onclick="show_list_sefaresh()">
                 <div class="items">
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/71.jpg" alt="همبرگر">
@@ -230,7 +307,7 @@
         <p id="scroll-irani" class="titel">غذای ایرانی</p>
         <hr class="roler">
         <div class="menu-item">
-            <div class="menu-foods">
+            <div class="menu-foods" onclick="show_list_sefaresh()">
                 <div class="items">
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/9.jpg" alt="غذای ایرانی">
@@ -240,7 +317,7 @@
                     </a>
                 </div>
             </div>
-            <div class="menu-foods">
+            <div class="menu-foods" onclick="show_list_sefaresh()">
                 <div class="items">
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/10.jpg" alt="غذای ایرانی">
@@ -250,7 +327,7 @@
                     </a>
                 </div>
             </div>
-            <div class="menu-foods">
+            <div class="menu-foods" onclick="show_list_sefaresh()">
                 <div class="items">
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/11.jpg" alt="غذای ایرانی">
@@ -260,7 +337,7 @@
                     </a>
                 </div>
             </div>
-            <div class="menu-foods">
+            <div class="menu-foods" onclick="show_list_sefaresh()">
                 <div class="items">
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/12.jpg" alt="غذای ایرانی">
@@ -270,7 +347,7 @@
                     </a>
                 </div>
             </div>
-            <div class="menu-foods">
+            <div class="menu-foods" onclick="show_list_sefaresh()">
                 <div class="items">
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/13.jpg" alt="غذای ایرانی">
@@ -280,7 +357,7 @@
                     </a>
                 </div>
             </div>
-            <div class="menu-foods">
+            <div class="menu-foods" onclick="show_list_sefaresh()">
                 <div class="items">
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/14.jpg" alt="غذای ایرانی">
@@ -290,7 +367,7 @@
                     </a>
                 </div>
             </div>
-            <div class="menu-foods">
+            <div class="menu-foods" onclick="show_list_sefaresh()">
                 <div class="items">
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/15.jpg" alt="غذای ایرانی">
@@ -300,7 +377,7 @@
                     </a>
                 </div>
             </div>
-            <div class="menu-foods">
+            <div class="menu-foods" onclick="show_list_sefaresh()">
                 <div class="items">
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/16.jpg" alt="غذای ایرانی">
@@ -310,7 +387,7 @@
                     </a>
                 </div>
             </div>
-            <div class="menu-foods">
+            <div class="menu-foods" onclick="show_list_sefaresh()">
                 <div class="items">
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/17.jpeg" alt="غذای ایرانی">
@@ -327,7 +404,7 @@
         <p id="scroll-fast-food" class="titel">آش و سوپ</p>
         <hr class="roler">
         <div class="menu-item">
-            <div class="menu-foods">
+            <div class="menu-foods" onclick="show_list_sefaresh()">
                  <div class="items">
                      <a class="link" href="#">
                          <img style="width: 150px; height: 135px;" src="picture/18.jpg" alt="سوپ">
@@ -337,7 +414,7 @@
                      </a>
                  </div>
             </div>
-            <div class="menu-foods">
+            <div class="menu-foods" onclick="show_list_sefaresh()">
                  <div class="items">
                      <a class="link" href="#">
                          <img style="width: 150px; height: 135px;" src="picture/19.jpg" alt="سوپ">
@@ -347,7 +424,7 @@
                      </a>
                  </div>
             </div>
-            <div class="menu-foods">
+            <div class="menu-foods" onclick="show_list_sefaresh()">
                  <div class="items">
                      <a class="link" href="#">
                          <img style="width: 150px; height: 135px;" src="picture/20.jpg" alt="سوپ">
@@ -357,7 +434,7 @@
                      </a>
                  </div>
             </div>
-            <div class="menu-foods">
+            <div class="menu-foods" onclick="show_list_sefaresh()">
                  <div class="items">
                      <a class="link" href="#">
                          <img style="width: 150px; height: 135px;" src="picture/21.jpg" alt="سوپ">
@@ -367,7 +444,7 @@
                      </a>
                  </div>
             </div>
-            <div class="menu-foods">
+            <div class="menu-foods" onclick="show_list_sefaresh()">
                 <div class="items">
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/22.jpg" alt="سوپ">
@@ -377,7 +454,7 @@
                     </a>
                 </div>
             </div>
-            <div class="menu-foods">
+            <div class="menu-foods" onclick="show_list_sefaresh()">
                 <div class="items">
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/23.jpg" alt="سوپ">
@@ -387,7 +464,7 @@
                     </a>
                 </div>
             </div>
-            <div class="menu-foods">
+            <div class="menu-foods" onclick="show_list_sefaresh()">
                 <div class="items">
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/24.jpg" alt="سوپ">
@@ -397,7 +474,7 @@
                     </a>
                 </div>
             </div>
-            <div class="menu-foods">
+            <div class="menu-foods" onclick="show_list_sefaresh()">
                 <div class="items">
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/25.jpg" alt="سوپ">
@@ -407,7 +484,7 @@
                     </a>
                 </div>
             </div>
-            <div class="menu-foods">
+            <div class="menu-foods" onclick="show_list_sefaresh()">
                 <div class="items">
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/26.jpg" alt="سوپ">
@@ -417,7 +494,7 @@
                     </a>
                 </div>
             </div>
-            <div class="menu-foods">
+            <div class="menu-foods" onclick="show_list_sefaresh()">
                 <div class="items">
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/27.jpg" alt="اش">
@@ -427,7 +504,7 @@
                     </a>
                 </div>
             </div>
-            <div class="menu-foods">
+            <div class="menu-foods" onclick="show_list_sefaresh()">
                 <div class="items">
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/28.jpg" alt="اش">
@@ -437,7 +514,7 @@
                     </a>
                 </div>
             </div>
-            <div class="menu-foods">
+            <div class="menu-foods" onclick="show_list_sefaresh()">
                 <div class="items">
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/29.jpg" alt="اش">
@@ -454,7 +531,7 @@
         <p id="scroll-estack" class="titel">استیک</p>
         <hr class="roler">
         <div class="menu-item">
-            <div class="menu-foods">
+            <div class="menu-foods" onclick="show_list_sefaresh()">
                 <div class="items">
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/30.jpg" alt="استیک">
@@ -464,7 +541,7 @@
                     </a>
                 </div>
             </div>
-            <div class="menu-foods">
+            <div class="menu-foods" onclick="show_list_sefaresh()">
                 <div class="items">
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/31.jpg" alt="استیک">
@@ -474,7 +551,7 @@
                     </a>
                 </div>
             </div>
-            <div class="menu-foods">
+            <div class="menu-foods" onclick="show_list_sefaresh()">
                 <div class="items">
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/32.jpg" alt="استیک">
@@ -484,7 +561,7 @@
                     </a>
                 </div>
             </div>
-            <div class="menu-foods">
+            <div class="menu-foods" onclick="show_list_sefaresh()">
                 <div class="items">
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/33.jpg" alt="استیک">
@@ -494,7 +571,7 @@
                     </a>
                 </div>
             </div>
-            <div class="menu-foods">
+            <div class="menu-foods" onclick="show_list_sefaresh()">
                 <div class="items">
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/34.jpg" alt="استیک">
@@ -504,7 +581,7 @@
                     </a>
                 </div>
             </div>
-            <div class="menu-foods">
+            <div class="menu-foods" onclick="show_list_sefaresh()">
                 <div class="items">
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/35.jpg" alt="استیک">
@@ -521,7 +598,7 @@
         <p id="scroll-pizza" class="titel">پیتزا</p>
         <hr class="roler">
         <div class="menu-item">
-            <div class="menu-foods">
+            <div class="menu-foods" onclick="show_list_sefaresh()">
                 <div class="items">
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/36.jpg" alt="پیتزا">
@@ -531,7 +608,7 @@
                     </a>
                 </div>
             </div>
-            <div class="menu-foods">
+            <div class="menu-foods" onclick="show_list_sefaresh()">
                 <div class="items">
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/37.jpg" alt="پیتزا">
@@ -541,7 +618,7 @@
                     </a>
                 </div>
             </div>
-            <div class="menu-foods">
+            <div class="menu-foods" onclick="show_list_sefaresh()">
                 <div class="items">
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/38.jpg" alt="پیتزا">
@@ -551,7 +628,7 @@
                     </a>
                 </div>
             </div>
-            <div class="menu-foods">
+            <div class="menu-foods" onclick="show_list_sefaresh()">
                 <div class="items">
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/39.jpg" alt="پیتزا">
@@ -561,7 +638,7 @@
                     </a>
                 </div>
             </div>
-            <div class="menu-foods">
+            <div class="menu-foods" onclick="show_list_sefaresh()">
                 <div class="items">
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/40.jpeg" alt="پیتزا">
@@ -571,7 +648,7 @@
                     </a>
                 </div>
             </div>
-            <div class="menu-foods">
+            <div class="menu-foods" onclick="show_list_sefaresh()">
                 <div class="items">
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/41.jpg" alt="پیتزا">
@@ -581,7 +658,7 @@
                     </a>
                 </div>
             </div>
-            <div class="menu-foods">
+            <div class="menu-foods" onclick="show_list_sefaresh()">
                 <div class="items">
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/42.jpg" alt="پیتزا">
@@ -591,7 +668,7 @@
                     </a>
                 </div>
             </div>
-            <div class="menu-foods">
+            <div class="menu-foods" onclick="show_list_sefaresh()">
                 <div class="items">
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/43.jpeg" alt="پیتزا">
@@ -601,7 +678,7 @@
                     </a>
                 </div>
             </div>
-            <div class="menu-foods">
+            <div class="menu-foods" onclick="show_list_sefaresh()">
                 <div class="items">
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/44.jpg" alt="پیتزا">
@@ -618,7 +695,7 @@
         <p id="scroll-salad" class="titel">سالاد</p>
         <hr class="roler">
         <div class="menu-item">
-            <div class="menu-foods">
+            <div class="menu-foods" onclick="show_list_sefaresh()">
                 <div class="items">
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/53.jpg" alt="سالاد">
@@ -628,7 +705,7 @@
                     </a>
                 </div>
             </div>
-            <div class="menu-foods">
+            <div class="menu-foods" onclick="show_list_sefaresh()">
                 <div class="items">
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/45.jpg" alt="سالاد">
@@ -638,7 +715,7 @@
                     </a>
                 </div>
             </div>
-            <div class="menu-foods">
+            <div class="menu-foods" onclick="show_list_sefaresh()">
                 <div class="items">
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/46.jpg" alt="سالاد">
@@ -648,7 +725,7 @@
                     </a>
                 </div>
             </div>
-            <div class="menu-foods">
+            <div class="menu-foods" onclick="show_list_sefaresh()">
                 <div class="items">
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/47.jpg" alt="سالاد">
@@ -658,7 +735,7 @@
                     </a>
                 </div>
             </div>
-            <div class="menu-foods">
+            <div class="menu-foods" onclick="show_list_sefaresh()">
                 <div class="items">
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/48.jpg" alt="سالاد">
@@ -668,7 +745,7 @@
                     </a>
                 </div>
             </div>
-            <div class="menu-foods">
+            <div class="menu-foods" onclick="show_list_sefaresh()">
                 <div class="items">
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/49.jpg" alt="سالاد">
@@ -678,7 +755,7 @@
                     </a>
                 </div>
             </div>
-            <div class="menu-foods">
+            <div class="menu-foods" onclick="show_list_sefaresh()">
                 <div class="items">
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/50.jpg" alt="سالاد">
@@ -688,7 +765,7 @@
                     </a>
                 </div>
             </div>
-            <div class="menu-foods">
+            <div class="menu-foods" onclick="show_list_sefaresh()">
                 <div class="items">
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/51.jpg" alt="سالاد">
@@ -698,7 +775,7 @@
                     </a>
                 </div>
             </div>
-            <div class="menu-foods">
+            <div class="menu-foods" onclick="show_list_sefaresh()">
                 <div class="items">
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/52.jpg" alt="سالاد">
@@ -715,7 +792,7 @@
         <p id="scroll-drink" class="titel">نوشیدنی ها</p>
         <hr class="roler">
         <div class="menu-item">
-            <div class="menu-foods">
+            <div class="menu-foods" onclick="show_list_sefaresh()">
                 <div class="items">
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/54.jpg" alt="نوشیدنی">
@@ -725,7 +802,7 @@
                     </a>
                 </div>
             </div>
-            <div class="menu-foods">
+            <div class="menu-foods" onclick="show_list_sefaresh()">
                 <div class="items">
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/55.jpg" alt="نوشیدنی">
@@ -735,7 +812,7 @@
                     </a>
                 </div>
             </div>
-            <div class="menu-foods">
+            <div class="menu-foods" onclick="show_list_sefaresh()">
                 <div class="items">
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/56.jpg" alt="نوشیدنی">
@@ -745,7 +822,7 @@
                     </a>
                 </div>
             </div>
-            <div class="menu-foods">
+            <div class="menu-foods" onclick="show_list_sefaresh()">
                 <div class="items">
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/57.jpg" alt="نوشیدنی">
@@ -755,7 +832,7 @@
                     </a>
                 </div>
             </div>
-            <div class="menu-foods">
+            <div class="menu-foods" onclick="show_list_sefaresh()">
                 <div class="items">
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/58.jpg" alt="نوشیدنی">
@@ -765,7 +842,7 @@
                     </a>
                 </div>
             </div>
-            <div class="menu-foods">
+            <div class="menu-foods" onclick="show_list_sefaresh()">
                 <div class="items">
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/59.jpg" alt="نوشیدنی">
@@ -775,7 +852,7 @@
                     </a>
                 </div>
             </div>
-            <div class="menu-foods">
+            <div class="menu-foods" onclick="show_list_sefaresh()">
                 <div class="items">
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/60.jpg" alt="نوشیدنی">
@@ -785,7 +862,7 @@
                     </a>
                 </div>
             </div>
-            <div class="menu-foods">
+            <div class="menu-foods" onclick="show_list_sefaresh()">
                 <div class="items">
                     <a class="link" href="#">
                         <img style="width: 150px; height: 135px;" src="picture/61.jpg" alt="نوشیدنی">
